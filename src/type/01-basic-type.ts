@@ -21,7 +21,7 @@ const sym: symbol = Symbol('');
  *
  *  strictNullChecks: false
  *      - null 和 undefined 可以赋值给任意类型
- * 
+ *
  *  void类型严格模式下只能是undefined，非严格模式下可以是null
  */
 const x1: void = undefined;
