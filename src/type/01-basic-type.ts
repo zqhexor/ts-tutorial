@@ -1,5 +1,11 @@
+/**
+ * 类型声明
+ *  : 类型
+ * 冒号加类型构成了类型注解，冒号前后可以包含任意空格
+ */
+
 const a1: boolean = true;
-const b1: string = 'hexor';
+const b1: string = "hexor";
 
 /**
  * Number类型可以是NaN、Infinity
@@ -12,7 +18,7 @@ const e1: number = Infinity;
  * Symbol类型
  *  需要把target的标准库改为ES2015，或者把lib改为["ES2015","dom"]
  */
-const sym: symbol = Symbol('');
+const sym: symbol = Symbol("");
 
 /**
  *  strictNullChecks: true
@@ -32,7 +38,7 @@ const z1: undefined = undefined;
  * Never类型代表不可能存在的类型，Never类型常常伴随着错误和异常出现
  */
 function error(message: string): never {
-  throw new Error(message)
+  throw new Error(message);
 }
 
 function infiniteLoop(): never {
@@ -48,5 +54,14 @@ function infiniteLoop(): never {
  *  2、未显式指定类型，且没有初始化或默认值
  */
 
- let m1: any = 10;
- let n1
+let m1: any = 10;
+let n1;
+
+/**
+ * 类型查询
+ *  : typeof 值
+ * 类型查询是一条语句，相当于一个独立类型。代码中任何需要显式注解类型的地方，都可以使用类型查询代替
+ */
+let g1: number;
+
+let h1: typeof g1; // 等价于 let h1: number;
