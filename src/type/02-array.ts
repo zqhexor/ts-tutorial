@@ -1,4 +1,7 @@
-// 数组类型 T[] 或者 Array<T>
+/**
+ * 数组类型
+ *  T[] 或者 Array<T>
+ */
 const list: number[] = [1, 2, 3];
 const list2: Array<number> = [1, 2, 3];
 const vec: number[][] = [
