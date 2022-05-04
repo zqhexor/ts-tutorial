@@ -58,6 +58,20 @@ let m1: any = 10;
 let n1;
 
 /**
+ * any类型 和 unknown类型
+ * 所有类型都可以赋值给 any类型和unknown类型
+ * unknown 类型只能被赋值给 any 类型和 unknown 类型本身
+ * 将 value 变量类型设置为 unknown 后，这些操作都不再被认为是类型正确的
+ */
+ let value1: any = '123'
+ let vaule2: unknown = true
+ let value3: string = value1
+ // let value4: string = vaule2 // Error
+ console.log(value3)
+ value1.trim()
+ // value2.trim() // Error
+
+/**
  * 类型查询
  *  : typeof 值
  * 类型查询是一条语句，相当于一个独立类型。代码中任何需要显式注解类型的地方，都可以使用类型查询代替
