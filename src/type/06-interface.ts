@@ -120,15 +120,15 @@ class Clock implements ClockInterface {
 /**
  * 接口继承
  */
-interface Shape {
+interface Shape6 {
   color: string;
 }
-interface Square extends Shape {
+interface Square6 extends Shape6 {
   sideLength: number;
 }
 
 // 正确，color 属性来自父接口
-let square: Square = {
+let square: Square6 = {
   color: "blue",
   sideLength: 4,
 };
