@@ -19,3 +19,14 @@ console.log(getLength<string>('what are you doing'))
 interface MyType<T = string> {
   value: T;
 }
+
+// error
+// let t2: MyType = {
+//   value: 123
+// }
+//
+
+// right
+let t2: MyType<number> = {
+  value: 123
+}

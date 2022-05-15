@@ -25,6 +25,7 @@ interface CacheStore {
 const cache: CacheStore = {};
 cache.foo = 1;
 cache.moo = 2;
+cache[3] = 2; // JavaScript会将数字索引转换为字符串索引
 
 // 接口的应用
 /**
@@ -84,7 +85,7 @@ interface MyFunc {
 let newFunc: MyFunc = myFunc;
 
 /**
- * 4.描述类
+ * 3.描述类
  */
 class NewClass {}
 // 用接口来描述这个类类型
