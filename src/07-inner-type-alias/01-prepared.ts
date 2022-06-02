@@ -56,11 +56,12 @@ type AnswerType = TestType<(a: { name: string }, b: { age: number }) => void>;
 // 所以子类型是他们的交叉类型，答案是{name: string} & {age: number}
 
 const answer: AnswerType = {
-  name: "xxx",
+  name: "hexor",
   age: 123,
 };
 
 /**
+ *
  * P 只在一个位置占位：直接推出类型
  * P 都在协变位置占位：推出占位类型的联合
  * P 都在逆变位置占位：推出占位类型的交叉（目前只有参数是逆变）
