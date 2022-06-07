@@ -47,13 +47,13 @@ interface IBaseCRUD<T> {
 class UserCRUD implements IBaseCRUD<User> {
   data: User[] = []
 
-  add(user: User) {
+  add(user: User): number {
     user.id = Date.now() + Math.random()
     this.data.push(user)
     return user.id
   }
 
-  getDetailById(id:number):User {
+  getDetailById(id:number): User {
     return this.data.find((user)=>user.id === id)! // 非空断言
   }
 }
