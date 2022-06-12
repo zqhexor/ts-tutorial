@@ -6,12 +6,12 @@
       };
  */
 
-interface Todo {
+interface TodoItem {
   title: string;
   description: string;
 }
 
-const todo1: Partial<Todo> = {
+const todo1: Partial<TodoItem> = {
   description: "描述",
 };
 
@@ -40,7 +40,7 @@ const props1: Props = { a: 5 }; // 正确
       };
  */
 
-const todo3: Readonly<Todo> = {
+const todo3: Readonly<TodoItem> = {
   title:"名字",
   description: "描述"
 }
