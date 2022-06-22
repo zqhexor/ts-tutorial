@@ -1,3 +1,3 @@
-type TupleToObject<T extends readonly any[]> = {
+type TupleToObject<T extends ReadonlyArray<string | number>> = {
   [K in T[number]]: K
 }
